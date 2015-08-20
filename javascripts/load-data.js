@@ -22,9 +22,16 @@ define(function(require){
 
     console.log("trips",trips);
 
-    var populatedTemplate = templates.tripTpl(trips);
+    var visitedTemplate = templates.visitedTpl(trips);
+    var wishTemplate = templates.wishTpl(trips);
      //insert the DOM string into the appropriate element
-    $("#list-of-trips").html(populatedTemplate);
+    $("#visitedListFb").html(visitedTemplate);
+    $(".beenThere").filter('[visited="true"]').show();
+    $(".beenThere").filter('[visited="false"]').hide();
+    $("#wishListFb").html(wishTemplate);
+    $(".wishToGo").filter('[visited="true"]').hide();
+    $(".wishToGo").filter('[visited="false"]').show();
+
   });
 });
 

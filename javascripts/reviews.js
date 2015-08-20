@@ -1,5 +1,6 @@
 define(function(require) {
   var $ = require ("jquery");
+  var firebase = require("firebase");
 
   var selectedTripId;
 

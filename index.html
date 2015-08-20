@@ -10,12 +10,13 @@
 </head>
 
 <body>
-<div id="list-of-trips"></div>
-<div class="container-fluid">
+<h2>Trippin'</h2>
+  <div id="list-of-trips"></div>
+    <div class="container-fluid">
           
-            <div class="col-sm-6">
+        <div class="col-sm-6">
 
-            <form>
+          <form>
             <div class="form-group">
               <label for="location-name">Location Name</label>
               <input type="text" class="form-control" id="location-name" placeholder="France">
@@ -32,21 +33,23 @@
             </div>
 
             <div class="btn-group" role="group" aria-label="true">
-                  <button id="visited" type="button" class="btn btn-default">Visited</button>
-                  <button id="wish-list" type="button" class="btn btn-default">Wish List</button>
-                </div>
+              <button id="visited" type="button" class="btn btn-default">Visited</button>
+              <button id="wish-list" type="button" class="btn btn-default">Wish List</button>
+            </div>
 
           </form>
               <button type="button" class="btn btn-default" id="add-location">Add location</button>
 
-            </div>
-        </div>
-        <div class="review-container">
+    </div>
+  </div>
+      <div class="review-container">
         <textarea class="review-entry"></textarea>
         <button id ="save-review">Save Review</button>
-        </div>
+      </div>
 
-<script data-main="javascripts/main" src="lib/bower_components/requirejs/require.js"></script>
+      <div id="visitedListFb"></div>
+      <div id="wishListFb"></div>
+  <script data-main="javascripts/main" src="lib/bower_components/requirejs/require.js"></script>
 
 </body>
 

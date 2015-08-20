@@ -1,5 +1,8 @@
 define(function(require){
+  //dependencies
 var $ = require("jquery");
+
+//module level variables
 var visited = false;
 
 $("#visited").click(function(){
@@ -13,8 +16,8 @@ $("#wish-list").click(function(){
   //POST the data to Firebase when Add Location button is clicked
     $("#add-location").click(function(){
     var newLocation = {
-      location: $("location-name").val(),
-      location_type: $("location-type").val(),
+      location: $("#location-name").val(),
+      location_type: $("#location-type").val(),
       visited: visited
     };
 
