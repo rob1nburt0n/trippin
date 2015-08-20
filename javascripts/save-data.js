@@ -10,27 +10,28 @@ $("#wish-list").click(function(){
   visited = false;
 });
 
-  $("#add-location").click(function(){
-  var newLocation = {
-    location: $("location-name"),
-    location_type: $("location-type").val() || "city",
-    visited: visited
-  };
+  //POST the data to Firebase when Add Location button is clicked
+    $("#add-location").click(function(){
+    var newLocation = {
+      location: $("location-name").val(),
+      location_type: $("location-type").val(),
+      visited: visited
+    };
 
-  console.log("newLocation", newLocation);
+    console.log("newLocation", newLocation);
 
-$.ajax({
-  url: "https://nss-robin-trippin.firebaseio.com/trips.json",
-  method: "POST",
-  data: JSON.stringify(newLocation)
-})
-.done(function(newData){
-  console.log("newData", newData);
+  $.ajax({
+      url: "https://nss-robin-trippin.firebaseio.com/trips.json",
+      method: "POST",
+      data: JSON.stringify(newLocation)
+  })
+    .done(function(newData){
+      console.log("newData", newData);
 
-}).fail(function(xhr, status, error) {
-  console.log("error", error);
-});
+    }).fail(function(xhr, status, error) {
+      console.log("error", error);
+    });
 
-});
+  });
 
 });
